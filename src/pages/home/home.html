@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>
+      AnsoDevChannel
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  <ion-list>
+    <div *ngFor="let video of videos">
+      <video-item [thumbnail]="video.snippet.thumbnails.high.url"
+       [title]="video.snippet.title" [description]="video.snippet.description" (clicked)="onShow(video)"></video-item>
+    </div>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </ion-list>
+</ion-content>

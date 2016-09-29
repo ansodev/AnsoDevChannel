@@ -1,0 +1,12 @@
+<ion-item text-wrap	no-padding>
+  <ion-img [src]="thumbnail"></ion-img>
+  <h2>{{title}}</h2>
+  <p>
+    {{description}}
+  </p>
+
+  <ion-buttons end>
+    <button ion-button clear (click)="onShow(video)">Assistir</button>
+  </ion-buttons>
+
+</ion-item>
