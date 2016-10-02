@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, ModalController } from 'ionic-angular';
-import { ShowVideo } from '../show-video/show-video';
 import { YoutubeService } from '../../providers/youtube-service';
 
 @Component({
@@ -31,11 +30,7 @@ export class HomePage {
    }
 
    onShow(video) {
-     let modal = this.modalCtrl.create(ShowVideo, {
-       videoId: video.id.videoId
-     });
-
-     modal.present();
+    
    }
 
    private initPage() {

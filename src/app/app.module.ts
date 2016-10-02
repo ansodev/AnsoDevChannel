@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ShowVideo } from '../pages/show-video/show-video';
 import { YoutubeService } from '../providers/youtube-service';
 import { VideoItem } from '../components/video-item/video-item';
 
@@ -10,7 +9,6 @@ import { VideoItem } from '../components/video-item/video-item';
   declarations: [
     MyApp,
     HomePage,
-    ShowVideo,
     VideoItem
   ],
   imports: [
@@ -19,8 +17,7 @@ import { VideoItem } from '../components/video-item/video-item';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    ShowVideo
+    HomePage
   ],
   providers: [YoutubeService]
 })
