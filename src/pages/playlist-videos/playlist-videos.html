@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <div *ngFor="let video of videos.items">
+      <video-item [thumbnail]="video.snippet.thumbnails.high.url"
+       [title]="video.snippet.title" [description]="video.snippet.description"
+       (clicked)="onShow(video)"></video-item>
+    </div>
+
+  </ion-list>
+</ion-content>

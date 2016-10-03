@@ -1,13 +1,16 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="danger">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <button ion-item menuClose>Videos</button>
+      <button ion-item menuClose *ngFor="let page of pages" (click)="openPage(page.page)">
+        <ion-icon [name]="page.icon"></ion-icon>
+          {{page.title}}
+      </button>
     </ion-list>
   </ion-content>
 </ion-menu>
