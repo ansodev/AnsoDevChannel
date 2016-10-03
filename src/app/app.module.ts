@@ -7,6 +7,11 @@ import { VideoItem } from '../components/video-item/video-item';
 import { MenuPage } from '../pages/menu/menu';
 import { PlaylistPage } from '../pages/playlist/playlist';
 import { PlaylistVideosPage } from '../pages/playlist-videos/playlist-videos';
+import { WordpressService } from '../providers/wordpress-service';
+import { PostsPage } from '../pages/posts/posts'
+import { PostItem } from '../components/post-item/post-item';
+import { ShowPostPage } from '../pages/show-post/show-post';
+import { PostViewer } from '../components/post-viewer/post-viewer';
 
 @NgModule({
   declarations: [
@@ -14,8 +19,12 @@ import { PlaylistVideosPage } from '../pages/playlist-videos/playlist-videos';
     MenuPage,
     HomePage,
     VideoItem,
+    PostItem,
+    PostViewer,
     PlaylistPage,
-    PlaylistVideosPage
+    PlaylistVideosPage,
+    PostsPage,
+    ShowPostPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,8 +35,10 @@ import { PlaylistVideosPage } from '../pages/playlist-videos/playlist-videos';
     MenuPage,
     HomePage,
     PlaylistPage,
-    PlaylistVideosPage
+    PlaylistVideosPage,
+    PostsPage,
+    ShowPostPage
   ],
-  providers: [YoutubeService]
+  providers: [YoutubeService, WordpressService]
 })
 export class AppModule {}

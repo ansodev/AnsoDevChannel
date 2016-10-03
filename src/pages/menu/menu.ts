@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { PlaylistPage } from '../playlist/playlist';
+import { PostsPage } from '../posts/posts';
 
 @Component({
   selector: 'page-menu',
@@ -14,7 +15,8 @@ export class MenuPage {
   constructor(public navCtrl: NavController) {
     this.pages = [
       {title: 'Videos', icon: 'logo-youtube', page: HomePage},
-      {title: 'Playlists', icon: 'list-box', page: PlaylistPage}
+      {title: 'Playlists', icon: 'list-box', page: PlaylistPage},
+      {title: 'Posts', icon: 'logo-wordpress', page: PostsPage}
     ]
   }
 
