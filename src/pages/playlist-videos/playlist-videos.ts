@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController, NavParams, ModalController } from 'ionic-angular';
+import { NavController, LoadingController, NavParams } from 'ionic-angular';
 import { YoutubeService } from '../../providers/youtube-service';
 import { ShowVideoPage } from '../show-video/show-video';
 
@@ -14,8 +14,7 @@ export class PlaylistVideosPage {
   playlistId: string;
 
   constructor(private navCtrl: NavController, private params: NavParams,
-    private loadingCtrl: LoadingController, private youtube: YoutubeService,
-    private modalCtrl: ModalController) {
+    private loadingCtrl: LoadingController, private youtube: YoutubeService) {
     this.initPage();
   }
 
@@ -44,11 +43,7 @@ export class PlaylistVideosPage {
   }
 
   onShow(video) {
-    let modal = this.modalCtrl.create(ShowVideoPage, {
-      videoId: video.snippet.resourceId.videoId
-    })
-
-    modal.present();
+    this.navCtrl.push(ShowVideoPage, { videoId: video.snippet.resourceId.videoId })
   }
 
 }

@@ -59,7 +59,7 @@ export class YoutubeService {
   private getBaseParams(nextPage: string, maxResults: string): URLSearchParams {
     let params = new URLSearchParams();
 
-    params.set('key', '[Sua key aqui]');
+    params.set('key', '[sua key aqui]');
     params.set('maxResults', maxResults);
     params.set('part', 'id, snippet');
     params.set('order', 'date');
