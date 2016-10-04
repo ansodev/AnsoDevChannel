@@ -12,6 +12,8 @@ import { PostsPage } from '../pages/posts/posts'
 import { PostItem } from '../components/post-item/post-item';
 import { ShowPostPage } from '../pages/show-post/show-post';
 import { PostViewer } from '../components/post-viewer/post-viewer';
+import { ShowVideoPage } from '../pages/show-video/show-video';
+import { VideoPlayer } from '../components/video-player/video-player';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { PostViewer } from '../components/post-viewer/post-viewer';
     VideoItem,
     PostItem,
     PostViewer,
+    VideoPlayer,
     PlaylistPage,
     PlaylistVideosPage,
     PostsPage,
-    ShowPostPage
+    ShowPostPage,
+    ShowVideoPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -37,7 +41,8 @@ import { PostViewer } from '../components/post-viewer/post-viewer';
     PlaylistPage,
     PlaylistVideosPage,
     PostsPage,
-    ShowPostPage
+    ShowPostPage,
+    ShowVideoPage
   ],
   providers: [YoutubeService, WordpressService]
 })

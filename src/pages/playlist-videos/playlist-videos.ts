@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, NavParams, ModalController } from 'ionic-angular';
 import { YoutubeService } from '../../providers/youtube-service';
+import { ShowVideoPage } from '../show-video/show-video';
 
 @Component({
   selector: 'page-playlist-videos',
@@ -43,11 +44,11 @@ export class PlaylistVideosPage {
   }
 
   onShow(video) {
-    // let modal = this.modalCtrl.create(ShowVideoPage, {
-    //   videoId: video.snippet.resourceId.videoId
-    // })
-    //
-    // modal.present();
+    let modal = this.modalCtrl.create(ShowVideoPage, {
+      videoId: video.snippet.resourceId.videoId
+    })
+
+    modal.present();
   }
 
 }

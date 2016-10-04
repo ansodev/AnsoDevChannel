@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController, ModalController } from 'ionic-angular';
 import { YoutubeService } from '../../providers/youtube-service';
+import { ShowVideoPage } from '../show-video/show-video';
 
 @Component({
   selector: 'page-home',
@@ -30,7 +31,7 @@ export class HomePage {
    }
 
    onShow(video) {
-    
+     this.navCtrl.push(ShowVideoPage, { videoId: video.id.videoId })
    }
 
    private initPage() {
